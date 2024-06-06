@@ -23,7 +23,7 @@
 
     <?php
     // koneksi ke database
-    include '../koneksi.php';
+    include 'koneksi.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
         $nama = $_POST['nama'];

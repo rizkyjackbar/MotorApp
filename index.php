@@ -27,9 +27,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#produk-kami">Produk</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#kontak">Kontak</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Lainnya
@@ -61,16 +58,16 @@
                         </p>
                     </div>
                 </div>
-                <div class="my-5 text-center">
-                    <h5 class="card-title text-center">Visi Misi</h5>
+                <div class="my-5 text-start">
+                    <h5 class="card-title text-start">Visi Misi</h5>
                     <p class="card-text">
                         Misi kami adalah untuk membangun komunitas yang solid di mana setiap anggota dapat berbagi
                         pengalaman, belajar satu sama lain, dan menikmati perjalanan bersama. Kami juga berkomitmen
                         untuk mendukung kegiatan sosial dan amal melalui berbagai acara yang kami selenggarakan.
                     </p>
                 </div>
-                <div class="my-5 text-center">
-                    <h5 class="card-title text-center">Kegiatan Kami</h5>
+                <div class="my-5 text-end">
+                    <h5 class="card-title text-end">Kegiatan Kami</h5>
                     <p class="card-text">
                         Di Motor Club, kami mengadakan berbagai acara seperti touring, workshop, pameran motor, dan
                         kegiatan amal. Kami juga menyediakan forum diskusi online bagi anggota untuk berdiskusi tentang segala
@@ -114,19 +111,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="kontak" class="container mt-5">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="text-center">Kontak</h2>
-                <p class="text-center text-muted">Hubungi kami untuk informasi lebih lanjut</p>
-                <div class="text-center">
-                    <p>Email: info@motorclub.com</p>
-                    <p>Telepon: +62 123 456 789</p>
                 </div>
             </div>
         </div>
@@ -278,9 +262,9 @@
                 <h2 class="text-center">Anggota</h2>
                 <p class="text-center text-muted">Daftar anggota Motor Club</p>
                 <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
+                    <table class="table table-striped table-bordered">
+                        <thead class="thead-dark">
+                            <tr class="">
                                 <th scope="col">Nama</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">Motor</th>
@@ -316,13 +300,26 @@
         </div>
     </div>
 
-    <footer class="footer mt-auto py-3 bg-light">
-        <div class="container text-center">
-            <span class="text-muted">Made with <i class="bi bi-heart-fill text-danger"></i> by rizkyjackbar</span>
+    <footer class="footer mt-5 py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="text-start">Kontak</h2>
+                    <div class="text-start">
+                        <p>Email: info@motorclub.com</p>
+                        <p>Telepon: +62 123 456 789</p>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end my-5">
+                    <span class="text-muted">Made with <i class="bi bi-heart-fill text-danger"></i> by rizkyjackbar</span>
+                </div>
+            </div>
         </div>
     </footer>
 
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>
