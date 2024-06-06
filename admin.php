@@ -22,7 +22,7 @@
     <hr>
 
     <?php
-    // koneksi ke database
+    // Koneksi ke database
     include 'koneksi.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
@@ -30,39 +30,35 @@
         $alamat = $_POST['alamat'];
         $motor = $_POST['motor'];
         $status = $_POST['status'];
-        // tambah data ke database
+        // Tambah data ke db
         $sql = "INSERT INTO anggota (nama_anggota, alamat, motor, status) VALUES ('$nama', '$alamat', '$motor', '$status')";
 
         if ($conn->query($sql) === TRUE) {
-            echo '<div id="alert_success" class="alert alert-success" role="alert">Anggota berhasil ditambahkan.</div>';
+            echo '<div id="alert_success" class="alert alert-success text-center" role="alert">Anggota berhasil ditambahkan.</div>';
         } else {
-            echo '<div id="alert_error" class="alert alert-danger" role="alert">Terjadi kesalahan: ' . $conn->error . '</div>';
+            echo '<div id="alert_error" class="alert alert-danger text-center" role="alert">Terjadi kesalahan: ' . $conn->error . '</div>';
         }
     }
 
-    if (isset($_POST["hapus"])) {
-        // Ambil ID anggota yang akan dihapus
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["hapus"])) {
         $id_anggota = $_POST["id_anggota"];
-
-        // menghapus anggota dari database
+        // Hapus anggota dari db
         $sql_delete = "DELETE FROM anggota WHERE id_anggota = '$id_anggota'";
 
         if ($conn->query($sql_delete) === TRUE) {
-            echo '<div id="alert_success" class="alert alert-success" role="alert">Anggota berhasil dihapus.</div>';
+            echo '<div id="alert_success" class="alert alert-success text-center" role="alert">Anggota berhasil dihapus.</div>';
         } else {
-            echo '<div id="alert_error" class="alert alert-danger" role="alert">Terjadi kesalahan saat menghapus anggota: ' . $conn->error . '</div>';
+            echo '<div id="alert_error" class="alert alert-danger text-center" role="alert">Terjadi kesalahan saat menghapus anggota: ' . $conn->error . '</div>';
         }
     }
 
-    if (isset($_POST["simpan_perubahan"])) {
-        // Ambil data dari db
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["simpan_perubahan"])) {
         $id_anggota = $_POST['id_anggota'];
         $nama = $_POST['nama'];
         $alamat = $_POST['alamat'];
         $motor = $_POST['motor'];
         $status = $_POST['status'];
-
-        // edit data anggota di database
+        // Edit anggota di db
         $sql_update = "UPDATE anggota SET nama_anggota='$nama', alamat='$alamat', motor='$motor', status='$status' WHERE id_anggota='$id_anggota'";
 
         if ($conn->query($sql_update) === TRUE) {
@@ -98,7 +94,6 @@
         <hr>
     </form>
 
-    <!-- menampilkan anggota -->
     <h2>Daftar Anggota</h2>
     <div class="table-responsive">
         <table class="table table-bordered">
@@ -113,7 +108,7 @@
             </thead>
             <tbody>
                 <?php
-                // Ambil data anggota dari database
+                // Ambil data anggota dari db
                 $sql = "SELECT * FROM anggota";
                 $result = $conn->query($sql);
 
@@ -131,9 +126,10 @@
                         echo "<button type='submit' class='btn btn-sm btn-danger' name='hapus'>Hapus</button>";
                         echo "</form>";
                         echo "</td>";
-
                         echo "</tr>";
-                        // Modal untuk edit anggota
+
+
+                        // Modal Tampilan edit
                         echo "<div class='modal fade' id='editModal" . $row["id_anggota"] . "' tabindex='-1' aria-labelledby='editModalLabel' aria-hidden='true'>";
                         echo "<div class='modal-dialog'>";
                         echo "<div class='modal-content'>";
@@ -173,22 +169,22 @@
                 } else {
                     echo "<tr><td colspan='5'>Tidak ada anggota</td></tr>";
                 }
-
-                // Tutup koneksi database
                 $conn->close();
                 ?>
             </tbody>
         </table>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
         window.setTimeout(function() {
-            document.getElementById("alert_success").style.display = "none";
-            document.getElementById("alert_error").style.display = "none";
+            let successAlert = document.getElementById("alert_success");
+            let errorAlert = document.getElementById("alert_error");
+            if (successAlert) successAlert.style.display = "none";
+            if (errorAlert) errorAlert.style.display = "none";
         }, 3000);
     </script>
 </body>
+
 </html>
