@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/two_wheeler_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Logo" width="100%" height="50px" class="d-inline-block align-text-top">
+                <img src="assets/img/Black_Retro_Motorcycle_Logo-removebg-preview.png" alt="Logo" width="100%" height="75px" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,15 +42,18 @@
         </div>
     </nav>
 
-    <div id="tentang-kami" class="container mt-5">
+    <div id="tentang-kami" class="container mt-5" style="padding: 60px 0; background: #f8f9fa; color: #343a40;">
         <div class="row">
-            <div class="col-12">
-                <h1 class="text-center">Tentang Kami</h1>
+            <div class="col-12 text-center">
+                <h1 class="text-center" style="font-size: 2.5rem; margin-bottom: 20px; font-weight: bold;">Tentang Kami</h1>
                 <p class="text-center text-muted">Selamat datang di Motor Club</p>
-
-                <div class="bg-siapa-kami mb-3">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="bg-siapa-kami mb-3" style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                     <div class="content container">
-                        <p class="card-text text-center">
+                        <p class="card-text text-center" style="margin-bottom: 0;">
                             Kami adalah komunitas pecinta motor yang berdedikasi untuk menyediakan tempat berkumpul bagi
                             para penggemar motor dari berbagai kalangan. Motor Club didirikan pada tahun 2020 dengan
                             tujuan untuk memfasilitasi kegiatan berkendara bersama, berbagi informasi, dan memperkuat
@@ -58,22 +61,29 @@
                         </p>
                     </div>
                 </div>
-                <div class="my-5 text-start">
-                    <h5 class="card-title text-start">Visi Misi</h5>
-                    <p class="card-text">
-                        Misi kami adalah untuk membangun komunitas yang solid di mana setiap anggota dapat berbagi
-                        pengalaman, belajar satu sama lain, dan menikmati perjalanan bersama. Kami juga berkomitmen
-                        untuk mendukung kegiatan sosial dan amal melalui berbagai acara yang kami selenggarakan.
-                    </p>
-                </div>
-                <div class="my-5 text-end">
-                    <h5 class="card-title text-end">Kegiatan Kami</h5>
-                    <p class="card-text">
-                        Di Motor Club, kami mengadakan berbagai acara seperti touring, workshop, pameran motor, dan
-                        kegiatan amal. Kami juga menyediakan forum diskusi online bagi anggota untuk berdiskusi tentang segala
-                        hal terkait motor, mulai dari modifikasi hingga tips perawatan.
-                    </p>
-                </div>
+            </div>
+        </div>
+        <div class="row section" style="margin-top: 40px;">
+            <div class="col-md-8 mx-auto" style="text-align: left;">
+                <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold; color: #007bff; margin-bottom: 20px;">Visi Misi</h5>
+                <p class="card-text" style="font-size: 1rem; color: #555;">
+                    Visi menjadi komunitas motor terdepan yang menginspirasi dan memperkuat semangat persaudaraan serta kebersamaan melalui kegiatan yang positif dan bermanfaat.
+                </p>
+                <p class="card-text" style="font-size: 1rem; color: #555;">
+                    Misi kami adalah untuk membangun komunitas yang solid di mana setiap anggota dapat berbagi
+                    pengalaman, belajar satu sama lain, dan menikmati perjalanan bersama. Kami juga berkomitmen
+                    untuk mendukung kegiatan sosial dan amal melalui berbagai acara yang kami selenggarakan.
+                </p>
+            </div>
+        </div>
+        <div class="row section" style="margin-top: 40px;">
+            <div class="col-md-8 mx-auto">
+                <h5 class="card-title" style="font-size: 1.75rem; font-weight: bold; color: #007bff; margin-bottom: 20px;">Kegiatan Kami</h5>
+                <p class="card-text" style="font-size: 1rem; color: #555;">
+                    Di Motor Club, kami mengadakan berbagai acara seperti touring, workshop, pameran motor, dan
+                    kegiatan amal. Kami juga menyediakan forum diskusi online bagi anggota untuk berdiskusi tentang segala
+                    hal terkait motor, mulai dari modifikasi hingga tips perawatan.
+                </p>
             </div>
         </div>
     </div>
@@ -308,9 +318,14 @@
                     <div class="text-start">
                         <p>Email: info@motorclub.com</p>
                         <p>Telepon: +62 123 456 789</p>
+                        <p>Alamat: Motor Club Headquarters Jalan Motor Nomor 99
+                        Kelurahan Gaspol, Kecamatan Ngebut
+                        Kota Cepat, Provinsi Tancap Gas
+                        Kode Pos 12345
+                        Indonesia</p>
                     </div>
                 </div>
-                <div class="col-md-6 text-end my-5">
+                <div class="col-md-6 text-end" style="margin-top: 80px;">
                     <span class="text-muted">Made with <i class="bi bi-heart-fill text-danger"></i> by rizkyjackbar</span>
                 </div>
             </div>
@@ -319,7 +334,11 @@
 
 
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
